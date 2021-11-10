@@ -15,16 +15,16 @@ export const getBooks = () => async (dispatch) => {
     .get(
       'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/zQULsHhZKS3dGsxoewbW/books',
     )
-    .then((res) => dispatch(fetchBooks(Object.entries(res.data))))
+    .then((res) => {
+      const books = res.data;
+      const formatedData = Object.keys(books).map((key) => {
+        const bookData = books[key][0];
+        return { ...bookData, id: key };
+      });
+      dispatch(fetchBooks(formatedData));
+    })
     .catch((err) => console.log(err));
 };
-// await fetch(
-//   'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/zQULsHhZKS3dGsxoewbW/books',
-// )
-//   .then((res) => res.json())
-//   .then((data) => dispatch(fetchBooks(Object.entries(data))))
-//   .catch((err) => err);
-// };
 
 export const postBook = (id, title, category) => async (dispatch) => {
   await fetch(
