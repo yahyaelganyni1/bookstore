@@ -1,25 +1,26 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
-import { addBook } from '../redux/books/books';
-
+import { postBook } from '../redux/configureStore';
 const BookForm = () => {
   const dispatch = useDispatch();
   const [title, setTitle] = useState('');
   const [category, setCategory] = useState('');
+  const [error, setError] = useState('');
 
   const addNewBook = () => {
-    const newBook = {
-      title,
-      category,
-      id: uuidv4(),
-    };
-    if (dispatch === undefined) {
-      console.log('dispatch');
+    const id = uuidv4();
+    if (title.length && category.length) {
+      dispatch(postBook(id, title, category));
+      setTitle('');
+      setCategory('');
+    } else if (!title.length && !category.length) {
+      setError('Please add book title, and category');
+    } else if (!title.length) {
+      setError('Please add book title');
+    } else {
+      setError('Please add book category');
     }
-    dispatch(addBook(newBook));
-    setTitle('');
-    setCategory('');
   };
   const handelTitleChange = (e) => {
     setTitle(e.target.value);
@@ -43,6 +44,7 @@ const BookForm = () => {
         onChange={handelCategoryChange}
         value={category}
       >
+        <option hidden>Add Book Category</option>
         <option>Action</option>
         <option>Comedy</option>
         <option>Drama</option>
@@ -52,6 +54,7 @@ const BookForm = () => {
       <button type="button" value="ADD BOOK" onClick={addNewBook}>
         ADD NEW BOOK
       </button>
+      <h6>{error}</h6>
     </div>
   );
 };
