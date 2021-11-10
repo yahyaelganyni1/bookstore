@@ -2,6 +2,7 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import logger from 'redux-logger';
 import booksReducer, { addBook, fetchBooks, removeBook } from './books/books';
+import axios from 'axios';
 
 const reducer = combineReducers({
   booksReducer,
@@ -10,13 +11,20 @@ const reducer = combineReducers({
 const store = createStore(reducer, applyMiddleware(thunk, logger));
 
 export const getBooks = () => async (dispatch) => {
-  await fetch(
-    'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/zQULsHhZKS3dGsxoewbW/books',
-  )
-    .then((res) => res.json())
-    .then((data) => dispatch(fetchBooks(JSON.parse(data))))
-    .catch((err) => err);
+  axios
+    .get(
+      'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/zQULsHhZKS3dGsxoewbW/books',
+    )
+    .then((res) => dispatch(fetchBooks(Object.entries(res.data))))
+    .catch((err) => console.log(err));
 };
+// await fetch(
+//   'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/zQULsHhZKS3dGsxoewbW/books',
+// )
+//   .then((res) => res.json())
+//   .then((data) => dispatch(fetchBooks(Object.entries(data))))
+//   .catch((err) => err);
+// };
 
 export const postBook = (id, title, category) => async (dispatch) => {
   await fetch(
