@@ -14,9 +14,7 @@ const BookForm = () => {
       category,
       id: uuidv4(),
     };
-    if (dispatch === undefined) {
-      console.log('dispatch');
-    }
+
     dispatch(addBook(newBook));
     setTitle('');
     setCategory('');

@@ -3,7 +3,12 @@ import { useDispatch } from 'react-redux';
 import propTypes from 'prop-types';
 import { removeBook } from '../redux/books/books';
 
-const SingleBook = ({ title, category, author, id }) => {
+const SingleBook = ({
+  title,
+  category,
+  author,
+  id,
+}) => {
   const dispatch = useDispatch();
 
   return (
@@ -13,7 +18,10 @@ const SingleBook = ({ title, category, author, id }) => {
       <p>{author}</p>
       <ul>
         <li>Comments</li>
-        <button type="button" onClick={() => dispatch(removeBook(id))}>
+        <button
+          type="button"
+          onClick={() => dispatch(removeBook(id))}
+        >
           Remove
         </button>
         <li>Edit</li>
