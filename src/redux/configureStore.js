@@ -1,8 +1,8 @@
-import { createStore, combineReducers, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import logger from 'redux-logger';
-import booksReducer, { addBook, fetchBooks, removeBook } from './books/books';
 import axios from 'axios';
+import { createStore, combineReducers, applyMiddleware } from 'redux';
+import booksReducer, { addBook, fetchBooks, removeBook } from './books/books';
 
 const reducer = combineReducers({
   booksReducer,

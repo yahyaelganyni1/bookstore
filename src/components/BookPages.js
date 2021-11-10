@@ -10,22 +10,19 @@ const BookPages = () => {
   useEffect(() => {
     dispatch(getBooks());
   }, [dispatch]);
-  console.log(books);
   return (
     <div>
       <ul>
         {books && books.length > 0 ? (
-          books.map((book) => {
-            return (
-              <SingleBook
-                title={book.title}
-                category={book.category}
-                author="yahya"
-                id={book.id}
-                key={book.id}
-              />
-            );
-          })
+          books.map((book) => (
+            <SingleBook
+              title={book.title}
+              category={book.category}
+              author="yahya"
+              id={book.id}
+              key={book.id}
+            />
+          ))
         ) : (
           <h3>Add New Book!</h3>
         )}
