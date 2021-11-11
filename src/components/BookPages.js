@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import SingleBook from './SingleBook';
 import BookForm from './BookForm';
-import { getBooks } from '../redux/configureStore';
+import { getBooks } from '../redux/books/books';
 
 const BookPages = () => {
   const books = useSelector((state) => state.booksReducer);

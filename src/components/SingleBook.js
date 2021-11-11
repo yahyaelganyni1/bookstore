@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import propTypes from 'prop-types';
-import { deleteBook } from '../redux/configureStore';
+import { deleteBook } from '../redux/books/books';
 
 const SingleBook = ({
   title,
