@@ -5,6 +5,9 @@ import BookForm from './BookForm';
 const BookPages = () => (
   <div>
     <SingleBook />
+    <SingleBook />
+    <SingleBook />
+    <SingleBook />
     <BookForm />
   </div>
 );

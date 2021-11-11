@@ -41,7 +41,7 @@ npm test
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page.](https://github.com/olawale-o/react-bookstore/issues)
+Feel free to check the [issues page.](https://github.com/yahyaelganyni1/bookstore/issues)
 
 ## Show your support
 

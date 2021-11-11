@@ -6,7 +6,7 @@ const SingleBook = () => (
     <h2>book title</h2>
     <ul>
       <li>Comments</li>
-      <li>Remove</li>
+      <button type="button">Remove</button>
       <li>Edit</li>
     </ul>
   </div>
