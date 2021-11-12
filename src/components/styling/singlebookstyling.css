@@ -2,14 +2,13 @@
   display: flex;
   justify-content: space-between;
   background-color: #fff;
-  margin: auto;
   width: 91%;
   margin: 2em;
   padding: 1em;
 }
 
 .category-span {
-  color: #888888;
+  color: #888;
   font-size: 1em;
   margin: 0.2em 2em 1em;
   font-family: 'Montserrat', sans-serif;
@@ -17,14 +16,14 @@
 }
 
 .single-book h2 {
-  margin: 0.2em 1em 0em;
+  margin: 0.2em 1em 0;
   font-size: 2em;
   font-family: 'RobotoSlab', sans-serif;
 }
 
 .single-book p {
   font-size: 1em;
-  margin: 0em 2em 1em;
+  margin: 0 2em 1em;
   color: #4386bf;
   font-family: 'Roboto Slab', serif;
 }
@@ -34,7 +33,7 @@
   display: flex;
   color: #4386bf;
   margin: 0.2em 2em 1em;
-  font-family: 'Montserrat';
+  font-family: 'Montserrat', sans-serif;
   font-weight: 600;
 }
 
@@ -42,7 +41,6 @@
   background: none;
   color: inherit;
   border: none;
-  padding: 0;
   font: inherit;
   cursor: pointer;
   outline: inherit;
@@ -55,14 +53,10 @@
   width: 0.125rem;
   height: 1.2rem;
 }
+
 svg {
   transform: rotate(-90deg);
 }
-
-/* .progress-circle {
-  stroke-dasharray: 100;
-  stroke-dashoffset: 0;
-} */
 
 hr {
   margin: auto;
@@ -83,16 +77,6 @@ hr {
   font-size: 2rem;
 }
 
-.progress-section div span {
-  font-size: 1rem;
-  opacity: 0.5;
-}
-
-.complete-progress-section {
-  flex: 1;
-  font-family: 'Montserrat';
-}
-
 .complete-progress-section span {
   width: 7.875rem;
   height: 1.125rem;
@@ -107,11 +91,21 @@ hr {
   color: #121212;
 }
 
+.progress-section div span {
+  font-size: 1rem;
+  opacity: 0.5;
+}
+
+.complete-progress-section {
+  flex: 1;
+  font-family: 'Montserrat', sans-serif;
+}
+
 .complete-progress-section h5 {
   width: 13.25rem;
   height: 1.313rem;
   margin: 0.063rem 5.375rem 0 2.688rem;
-  font-family: RobotoSlab;
+  font-family: 'RobotoSlab', sans-serif;
   font-size: 1.2rem;
   font-weight: 300;
   letter-spacing: -0.4px;

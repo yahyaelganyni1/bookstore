@@ -4,14 +4,14 @@
 }
 
 .book-form h5 {
-  color: #888888;
+  color: #888;
   font-size: 1em;
   margin: 0.5em;
   font-family: 'Montserrat', sans-serif;
 }
 
 .book-form input {
-  color: #888888;
+  color: #888;
   padding: 0.5em 0.3em 0.5em 0.5em;
   margin: 0.5em;
   border-radius: 5%;
@@ -22,7 +22,7 @@
 }
 
 .book-form select {
-  color: #888888;
+  color: #888;
   font-size: 1em;
   padding: 0.5em 0.3em 0.5em 0.5em;
   margin: 0.5em;
