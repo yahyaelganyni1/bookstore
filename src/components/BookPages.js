@@ -10,6 +10,8 @@ const BookPages = () => {
   useEffect(() => {
     dispatch(getBooks());
   }, [dispatch]);
+  const randomNum = () => Math.floor(Math.random() * (188 - 50) + 50);
+
   return (
     <div>
       <ul>
@@ -21,12 +23,14 @@ const BookPages = () => {
               author="yahya"
               id={book.id}
               key={book.id}
+              randomNum={randomNum()}
             />
           ))
         ) : (
           <h3>Add New Book!</h3>
         )}
       </ul>
+      <hr size="3" width="91%" color="#e8e8e8" />
       <BookForm />
     </div>
   );

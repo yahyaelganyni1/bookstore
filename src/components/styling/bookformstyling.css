@@ -1,0 +1,43 @@
+.book-form {
+  width: 91%;
+  margin: auto;
+}
+
+.book-form h5 {
+  color: #888888;
+  font-size: 1em;
+  margin: 0.5em;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.book-form input {
+  color: #888888;
+  padding: 0.5em 0.3em 0.5em 0.5em;
+  margin: 0.5em;
+  border-radius: 5%;
+  width: 50%;
+  height: 2.6em;
+  font-size: 1em;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.book-form select {
+  color: #888888;
+  font-size: 1em;
+  padding: 0.5em 0.3em 0.5em 0.5em;
+  margin: 0.5em;
+  border-radius: 5%;
+  width: 30%;
+  height: 2.6em;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.book-form button {
+  color: #fff;
+  background-color: #0290ff;
+  border-radius: 5%;
+  width: 16%;
+  height: 3.1em;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8em;
+}
