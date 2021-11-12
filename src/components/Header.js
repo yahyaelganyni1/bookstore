@@ -6,7 +6,7 @@ import './styling/headerstyling.css';
 const Header = () => (
   <header className="header">
     <div>
-      <h1>Bookstore</h1>
+      <h1>Bookstore CMS </h1>
       <nav>
         <Link to="/" className="book-link">
           Books
