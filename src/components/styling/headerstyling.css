@@ -1,0 +1,40 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fff;
+  padding: 1.2em 5em;
+  align-items: center;
+}
+
+.header nav {
+  display: flex;
+  align-items: center;
+  transform: translate(0%, 5%);
+}
+
+.header div {
+  display: flex;
+  align-content: center;
+}
+
+.header h1 {
+  color: #0290ff;
+  font-size: 2.2em;
+  flex: 1;
+  font-weight: 900;
+  padding-right: 3em;
+}
+
+.header a {
+  color: black;
+  text-decoration: none;
+  font-size: 1.1em;
+  padding: 0.6em;
+  font-weight: 600;
+  flex: 1;
+}
+
+.categories-link {
+  opacity: 0.5;
+}

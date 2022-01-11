@@ -1,0 +1,124 @@
+.single-book {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  width: 88%;
+  margin: 2em auto;
+  padding: 1em;
+}
+
+.category-span {
+  color: #888;
+  font-size: 1em;
+  margin: 0.2em 2em 1em;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+}
+
+.single-book h2 {
+  margin: 0.2em 1em 0;
+  font-size: 2em;
+  font-family: 'RobotoSlab', sans-serif;
+}
+
+.single-book p {
+  font-size: 1em;
+  margin: 0 2em 1em;
+  color: #4386bf;
+  font-family: 'Roboto Slab', serif;
+}
+
+.single-book ul {
+  list-style-type: none;
+  display: flex;
+  color: #4386bf;
+  margin: 0.2em 2em 1em;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+.single-book button {
+  background: none;
+  color: inherit;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  padding: 0 0.4em;
+}
+
+.divider-line-ul {
+  border-left: 1px solid black;
+  opacity: 0.5;
+  width: 0.125rem;
+  height: 1.2rem;
+}
+
+svg {
+  transform: rotate(-90deg);
+}
+
+hr {
+  margin: auto;
+}
+
+.category-name-section {
+  flex: 3;
+}
+
+.progress-section {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.progress-section div h3 {
+  font-size: 2rem;
+}
+
+.complete-progress-section span {
+  width: 7.875rem;
+  height: 1.125rem;
+  margin: 0.063rem 5.375rem 0 2.688rem;
+  opacity: 0.5;
+  font-size: 0.813rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.progress-section div span {
+  font-size: 1rem;
+  opacity: 0.5;
+}
+
+.complete-progress-section {
+  flex: 1;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.complete-progress-section h5 {
+  width: 13.25rem;
+  height: 1.313rem;
+  margin: 0.063rem 5.375rem 0 2.688rem;
+  font-family: 'RobotoSlab', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+  letter-spacing: -0.4px;
+  color: #121212;
+}
+
+.complete-progress-section button {
+  margin: 2.063rem 5.375rem 0 2.688rem;
+  color: #fff;
+  background-color: #0290ff;
+  border-radius: 5%;
+  height: 2.7em;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8em;
+  width: 65%;
+}

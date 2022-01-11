@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import { postBook } from '../redux/books/books';
+import './styling/bookformstyling.css';
 
 const BookForm = () => {
   const dispatch = useDispatch();
@@ -30,7 +31,7 @@ const BookForm = () => {
     setCategory(e.target.value);
   };
   return (
-    <div>
+    <div className="book-form">
       <h5>ADD NEW BOOK</h5>
       <input
         placeholder="Book Title"
@@ -45,15 +46,19 @@ const BookForm = () => {
         onChange={handelCategoryChange}
         value={category}
       >
-        <option hidden>Add Book Category</option>
+        <option hidden>Category</option>
         <option>Action</option>
         <option>Comedy</option>
         <option>Drama</option>
         <option>Horror</option>
         <option>Romance</option>
       </select>
-      <button type="button" value="ADD BOOK" onClick={addNewBook}>
-        ADD NEW BOOK
+      <button
+        type="button"
+        value="ADD BOOK"
+        onClick={addNewBook}
+      >
+        ADD BOOK
       </button>
       <h6>{error}</h6>
     </div>
